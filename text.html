@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jsplumb中文API</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		#box{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		h1{
+			width: 100%;
+			height: 45px;
+			text-align: center;
+		}
+		h2{
+			width: 100%;
+			height: 30;
+			text-align: center;
+			margin: 10px 0;
+		}
+		#list{
+			float: left;
+			width: 25%;
+			overflow: auto;
+			margin-bottom: 10px;
+		}
+		#list li{
+			padding: 5px 0;
+			width: 100%;
+			color: #428bca;
+		}
+		#list li:hover{
+			color: #2a6496;
+    		text-decoration: underline;
+    		cursor: pointer;
+		}
+		#content{
+			float: right;
+			width: 73%;
+			padding-left: 10px;
+			margin-bottom: 10px;
+		}
+		#content .title{
+			font-size: 24px;
+			margin: 20px 0 10px 0;
+			font-weight: 500;
+		}
+		.info{
+			background-color: #f8f8f8;
+		    padding: 14px;
+		    margin-bottom: 19px;
+		    border-radius: 3px;
+		    font-size: 13px;
+		    color: #434343;
+		}
+		.info h6{
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+		.deprecated{
+			margin-bottom: 10px;
+		}
+		.original{
+			margin: 5px 0 10px 0;
+		}
+		.parameters{
+			width: 100%;
+			margin-top: 10px;
+		}
+		.parameters li{
+			width: 100%;
+			overflow: hidden;
+		}
+		.parameters .name{
+			float: left;
+			width: 12%;
+			margin-left: 4%;
+		}
+		.parameters .parameterCont{
+			float: right;
+			width: 83%;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h1>jsplumb中文API</h1>
+		<h2>原网址：<a href="https://jsplumbtoolkit.com/community/apidocs/index.html" target="black">https://jsplumbtoolkit.com/community/apidocs/index.html</a></h2>
+		<div id="list">
+			<ul></ul>
+		</div>
+		<div id="content" colspan>
+			<div>
+				<h6 class="title"></h6>
+				<p class="deprecated"></p>
+				<div class="info">
+					<h6>原文</h6>
+					<div class="original"></div>
+					<h6>译文</h6>
+					<div class="translation"></div>
+					<div class="parameters"></div>
+				</div>
+			</div>
+			<!-- <div id="method">
+				<h2>Methods</h2>
+				<div class="Methods"></div>
+			</div> -->
+		</div>
+	</div>
+</body>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		var height = $(window).height();
+		var contentHeight = height - 65;
+		$("#list").height(contentHeight)
+		var list = [
+			"Anchors.Assign",
+			"Anchors.AutoDefault",
+			"Anchors.Bottom",
+			"Anchors.BottomCenter",
+			"Anchors.BottomLeft",
+			"Anchors.BottomRight",
+			"Anchors.Center",
+			"Anchors.Continuous",
+			"Anchors.ContinuousBottom",
+			"Anchors.ContinuousLeft",
+			"Anchors.ContinuousRight",
+			"Anchors.ContinuousTop",
+			"Anchors.Left",
+			"Anchors.LeftMiddle",
+			"Anchors.Perimeter",
+			"Anchors.Right",
+			"Anchors.RightMiddle",
+			"Anchors.Top",
+			"Anchors.TopCenter",
+			"Anchors.TopLeft",
+			"Anchors.TopRight",
+			"Connection",
+			"Connector",
+			"Connectors.Bezier",
+			"Connectors.Flowchart",
+			"Connectors.StateMachine",
+			"Connectors.Straight",
+			"Endpoint",
+			"Endpoints.Blank",
+			"Endpoints.Dot",
+			"Endpoints.Image",
+			"Endpoints.Rectangle",
+			"jsPlumb",
+			"jsPlumbInstance",
+			"jsPlumbUIComponent",
+			"jsPlumbUtil",
+			"jsPlumbUtil.EventGenerator",
+			"Overlay",
+			"OverlayCapableJsPlumbUIComponent",
+			"Overlays.Arrow",
+			"Overlays.Diamond",
+			"Overlays.Label",
+			"Overlays.PlainArrow"
+		]
+		var json = {
+			"Anchors.Assign" : {
+				title : "Anchors.Assign Class",
+				original : "An Anchor whose location is assigned at connection time, through an AnchorPositionFinder. Used in conjunction with the makeTarget function. jsPlumb has two of these - Fixed and Grid, and you can also write your own.",
+				translation : "锚的位置是通过anchorpositionfinder，在连接时分配。与创建目标函数结合使用。jsPlumb有这两个函数 Fixed 和 Grid ，你也可以自己写。",
+				parameters : null
+			},
+			"Anchors.AutoDefault":{
+				title : "Anchors.AutoDefault Class",
+				original : "Default DynamicAnchors - chooses from Top, Right, Bottom, Left.",
+				translation : "默认DynamicAnchors(动态锚)-选择从顶部，底部，左，右。",
+				parameters : null
+			},
+			"Anchors.Bottom":{
+				title : "Anchors.Bottom Class",
+				original : "An Anchor that is located at the bottom center of the element.",
+				translation : "位于元素底部的锚。",
+				parameters : null
+			},
+			"Anchors.BottomLeft":{
+				title : "Anchors.BottomLeft Class",
+				original : "An Anchor that is located at the bottom left corner of the element.",
+				translation : "位于元素左下角的锚点。",
+				parameters : null
+			},
+			"Anchors.BottomRight":{
+				title : "Anchors.BottomRight Class",
+				original : "An Anchor that is located at the bottom right corner of the element.",
+				translation : "位于元素右下角的锚点。",
+				parameters : null
+			},
+			"Anchors.Center":{
+				title : "Anchors.Center Class",
+				original : "An Anchor that is located at the center of the element.",
+				translation : "位于元素中心的一个锚点。",
+				parameters : null
+			},
+			"Anchors.Continuous":{
+				title : "Anchors.Continuous Class",
+				original : "An Anchor that tracks the other element in the connection, choosing the closest face.",
+				translation : "跟踪连接中其他元素的锚点，选择最近的面。",
+				parameters : [
+					{
+						name : "faces",
+						type : "String",
+						value :"可选的锚点数组。有效值是'top'、'left'、'bottom'、'right'。"
+					}
+				]
+			},
+			"Anchors.ContinuousBottom":{
+				title : "Anchors.ContinuousBottom Class",
+				original : "A continuous anchor that uses only the bottom edge of the element.",
+				translation : "仅使用元素的下边缘的连续锚点。",
+				parameters : null
+			},
+			"Anchors.ContinuousLeft":{
+				title : "Anchors.ContinuousLeft Class",
+				original : "A continuous anchor that uses only the left edge of the element.",
+				translation : "仅使用元素的左边缘的连续锚点。",
+				parameters : null
+			},
+			"Anchors.ContinuousRight":{
+				title : "Anchors.ContinuousRight  Class",
+				original : "A continuous anchor that uses only the right edge of the element.",
+				translation : "仅使用元素右边的连续锚点。",
+				parameters : null
+			},
+			"Anchors.ContinuousTop":{
+				title : "Anchors.ContinuousTop  Class",
+				original : "A continuous anchor that uses only the top edge of the element.",
+				translation : "仅使用元素的上边缘的连续锚点。",
+				parameters : null
+			},
+			"Anchors.Left":{
+				title : "Anchors.Left Class",
+				original : "An Anchor that is located at the left middle of the element.",
+				translation : "位于元素左中间的一个锚点。",
+				parameters : null
+			},
+			"Anchors.Perimeter":{
+				title : "Anchors.Perimeter Class",
+				original : "An Anchor that tracks the perimeter of some shape, approximating it with a given number of dynamically positioned locations.",
+				translation : "锚跟踪某些形状的周长，用给定数量的动态位置来逼近它。",
+				parameters : [
+					{
+						name : "anchorCount=60",
+						type : "Integer",
+						value : '可选择的近似周长的锚点数目。默认值是60。'
+					},{
+						name : "shape",
+						type : "String",
+						value : '必选。形状的名称，有效值是"rectangle"、"square"、"ellipse"、"circle"、"triangle"和"diamond'
+					},{
+						name : "rotation",
+						type : "Number",
+						value : '旋转度数。'
+					}
+				]
+			},
+			"Anchors.Right":{
+				title : "Anchors.Right Class",
+				original : "An Anchor that is located at the right middle of the element.",
+				translation : "位于元素右中间的一个锚点。",
+				parameters : null
+			},
+			"Anchors.Top":{
+				title : "Anchors.Left Class",
+				original : "An Anchor that is located at the top center of the element.",
+				translation : "位于元素顶端的锚。",
+				parameters : null
+			},
+			"Anchors.TopLeft":{
+				title : "Anchors.TopLeft  Class",
+				original : "An Anchor that is located at the top left corner of the element.",
+				translation : "位于元素左上角的锚点。",
+				parameters : null
+			},
+			"Anchors.TopRight":{
+				title : "Anchors.TopRight Class",
+				original : "An Anchor that is located at the top right corner of the element.",
+				translation : "位于元素右上角的锚点。",
+				parameters : null
+			},
+			"Connection":{
+				title : "Connection Class",
+				original : "Models a Connection. A Connection consists of two Endpoints (each of which belongs to some DOM element), a Connector (the actual path inscribed by the Connection), and zero or more Overlays.",
+				translation : "建立连接模型。连接由两个端点（每一个端点都属于某个DOM元素）、一个连接器（连接的实际路径）和零个或多个覆盖组成。",
+				parameters : null
+			},
+			"Connector":{
+				title : "Connector Class",
+				original : 'Parent for all Connector types. When you provide a Connector definition to an appropriate jsPlumb method, you can do so either as a String, or as an Array of the form [String, Object]. In the former case, the String must be one of the members from this namespace, such as "Bezier" or "StateMachine". In the latter case, the first argument to the array is the Connector name, and the second is a JS object containing constructor parameters for the Connector, for instance [ "Bezier", { curviness:75 } ] Each Connector type supports its own set of parameters, with some parameters (such as stub) being shared by most.',
+				translation : '所有连接器类型的父级。当你提供一个连接器定义到一个合适的jsPlumb方法，你可以这样做，无论是作为一个字符串，或为形式[字符串数组，对象]。在前一种情况下，字符串必须从这个命名空间的成员之一，如“Bezier”或“StateMachine”。在后一种情况下，数组的第一个参数是连接器名称，第二个参数是一个包含连接器的构造函数参数的JS对象，例如  [ "Bezier", { curviness:75 } ] 每个连接器类型都支持自己的参数集，其中一些参数（如存根）是大多数共享的。',
+				parameters : null
+			},
+			"Connectors.Bezier":{
+				title : "Connector.Bezier Class",
+				original : "This Connector draws a Bezier curve with two control points. You can provide a 'curviness' value which gets applied to jsPlumb's internal voodoo machine and ends up generating locations for the two control points.",
+				translation : '此连接器绘制具有两个控制点的贝塞尔曲线。你可以提供一个被应用到jsPlumb内部“voodoo machine”的“curviness”值，最终就产生两个控制点的位置。',
+				parameters : [
+					{
+						name : "curviness=150",
+						type : "Integer",
+						value : "这个值越大，曲线从直线上拉得就越大。"
+					},{
+						name : "stub=0",
+						type : "Integer",
+						value : "可选值,在开始贝塞尔曲线之前从连接器端点移动的距离。"
+					}
+				]
+			},
+			"Connectors.Flowchart":{
+				title : "Connectors.Flowchart Class",
+				original : 'Provides Flowchart connectors.',
+				translation : '提供流程图连接器。',
+				parameters : [{
+					name : "stub=30",
+					type : "Integer",
+					value : "连接器两端各短截线的最小长度。这可以是一个整数，给出连接两端的值，或两个整数的数组，为每个结束提供单独的值。"
+				},
+				{
+					name : "gap=0",
+					type : "Integer",
+					value : "在连接器末端和端点驻留元素之间留出的间隙。如果你把这个做得比存根还大，你会看到一些奇怪的行为。像存根一样，可以是数组或单个值。"
+				},
+				{
+					name : "cornerRadius=0",
+					type : "Float",
+					value : "可选的，定义分段之间的角半径。默认为0（硬边角）"
+				},
+				{
+					name : "alwaysRespectStubs=false",
+					type : "Boolean",
+					value : "连接器两端各短截线的最小长度。这可以是一个整数，给出连接两端的值，或两个整数的数组，为每个结束提供单独的值。"
+				},
+				{
+					name : "midpoint=0.5",
+					type : "Number",
+					value : "如果提供，将使用此位置jsPlumb作为连接器的中点。"
+				}]
+			},
+			"Connectors.StateMachine":{
+				title : "Connectors.StateMachine Class",
+				original : 'Provides "state machine" connectors. These are a quadratic bezier curve.',
+				translation : '提供“状态机”连接器。这是一个二次贝塞尔曲线。',
+				parameters : [{
+					name : "curviness=10",
+					type : "Number",
+					value : '衡量“曲线”将连接。这是贝塞尔曲线的控制点从连接两个端点的直线中点的距离，并不意味着连接器是这个宽的。贝塞尔曲线永远不会到达它的控制点，它们充当引力质量。'
+
+				},{
+					name : "margin=5",
+					type : "Integer",
+					value : '从元素到开始和结束连接器的距离（以像素为单位）。'
+
+				},{
+					name : "proximityLimit=80",
+					type : "Integer",
+					value : '设置元素被认为过于紧密的距离，以避免花哨曲线的困扰。'
+
+				},{
+					name : "loopbackRadius=25",
+					type : "Integer",
+					value : '环回连接器的半径。'
+
+				},{
+					name : "showLoopback=true",
+					type : "Boolean ",
+					value : '如果设置为false，这就告诉连接器，它可以通过连接元素的连接器来绘制源和目标是相同元素的连接。默认值为true；连接器总是在元素周围进行环回连接循环，而不是通过它。'
+
+				},{
+					name : 'orientation="clockwise"',
+					type : "Number",
+					value : '有效值是“clockwise(顺时针)”和“anticlockwise(逆时针)”。表示环形连接应以什么方向环绕。'
+
+				}]
+			},
+			"Connectors.Straight":{
+				title : "Connectors.Straight Class",
+				original : 'he Straight connector draws a simple straight line between the two anchor points.',
+				translation : '直连接器在两个锚点之间画一条简单的直线。',
+				parameters : [{
+					name : "stub=0",
+					type : "Integer",
+					value : "在两个连接之间进行连接之前从每个端点移动的可选距离。"
+				},{
+					name : "sourceStub",
+					type : "Integer",
+					value : "仅用于源端点的可选存根。"
+				},{
+					name : "targetStub",
+					type : "Integer",
+					value : "仅用于目标终结点的可选存根。"
+				},{
+					name : "gap=0",
+					type : "Integer",
+					value : "可在端点和连接器的开始之间选择的间隙。"
+				},{
+					name : "sourceGap",
+					type : "Integer",
+					value : "仅用于源端点的可选间隙。"
+				},{
+					name : "targetGap",
+					type : "Integer",
+					value : "仅针对目标端点的可选间隔。"
+				}]
+			},
+			"Endpoint":{
+				title : "Endpoint Class",
+				original : `Models an Endpoint - one end of a Connection. An Endpoint has an underlying Anchor, which is what determines the Endpoint's position. Each Endpoint can have 1 to maxConnections connections emanating from it (set maxConnections to -1 to allow unlimited Connections; the default is 1).You never need to create an Endpoint directly. When you provide an Endpoint definition to an appropriate jsPlumb method, you can do so either as a string, or as an array of the form [String, Object]. In the former case, the string must be the name of some available Endpoint, such as "Dot" or "Rectangle". In the latter case, the first argument to the array is the Endpoint name, and the second is a JS object containing constructor parameters for the Endpoint, for instance  <br/> [ "Dot", { radius:75 } ]`,
+				translation : `建模端点-连接的一端。端点有一个基础锚点，它决定端点的位置。每个端点可以有1到MAXCONNECTIONS连接来自它（设置MAXCONNECTIONS -让1无限连接；默认值为1）。您不需要直接创建端点。当你提供一个端点定义到一个合适的jsPlumb方法，你可以这样做，无论是作为一个字符串，或为形式[字符串数组，对象]。在前一种情况下，字符串必须是一些可用端点的名称，如“点”或“矩形”。在后一种情况下，数组的第一个参数是端点名，第二个参数是一个JS对象，包含端点的构造函数参数，例如[ "Dot", { radius:75 } ]`,
+				parameters : [
+					{
+						name : "anchor",
+						type : "String | Array",
+						value : "端点锚的定义。看到一个讨论这个jsPlumb文档。"
+					},{
+						name : "endpoint",
+						type : "String | Array",
+						value : "终点的定义。看到一个讨论这个jsPlumb文档。"
+					},{
+						name : "enabled=true",
+						type : "Boolean",
+						value : "是否应该为鼠标事件启用端点（拖放）。"
+					},{
+						name : "paintStyle=null",
+						type : "Object",
+						value : "端点样式，js对象。可能是空的。"
+					},{
+						name : "hoverPaintStyle=null",
+						type : "Object",
+						value : "鼠标悬停在端点时使用的样式。js对象。可能是null；默认为null。"
+					},{
+						name : "cssClass=null",
+						type : "String",
+						value : "在与该端点关联的显示元素上设置CSS类。"
+					},{
+						name : "hoverClass=null",
+						type : "String",
+						value : "当处于悬停状态时，在与此端点关联的显示元素上设置CSS类。"
+					},{
+						name : "source",
+						type : "String | Selector | Element",
+						value : "元素的端点连接到类型字符串（元素ID）、元素选择器或元素。必须的."
+					},{
+						name : "container",
+						type : "String | Selector | Element ",
+						value : "ID或选择器指示jsPlumb地方附加它创造这个终点的元素。您应该阅读文档以充分讨论这一点。"
+					},{
+						name : "connections",
+						type : " [Connection,...]",
+						value : "配置端点的连接列表。"
+					},{
+						name : "isSource=false",
+						type : "String | Array",
+						value : "指示端点可以作为新连接的源。可选；默认为false。"
+					},{
+						name : "maxConnections=1",
+						type : "Integer ",
+						value : "-1意味着没有上限。"
+					},{
+						name : "dragOptions",
+						type : "Object",
+						value : '如果"isSource"被设置为true，可以对底层库的拖动方法提供参数。可选；默认为null。'
+					},{
+						name : "connectorStyle",
+						type : "Object",
+						value : '如果"isSource"被设置为true，这是油漆的风格从这个端点连接。可选；默认为null。'
+					},{
+						name : "connectorHoverStyle",
+						type : "Object",
+						value : '如果"isSource"被设置为true，这是悬停油漆风格从这个端点连接。可选；默认为null。'
+					},{
+						name : "connector",
+						type : "String | Object ",
+						value : "要使用的连接器类型。喜欢的终点，这可能是一个字符串指定一个已知的连接器类型（如“B”、“直”），或一个数组包含[名字]，参数，如[“bezier”，{ 160 } ]但是曲线美才。"
+					},{
+						name : "connectorOverlays",
+						type : "Object",
+						value : "将应用于此端点的任何连接的覆盖定义数组。"
+					},{
+						name : "connectorClass",
+						type : "String",
+						value : "设置从该端点发出的连接的CSS类。"
+					},{
+						name : "connectorHoverClass",
+						type : "String",
+						value : "设置为在悬停状态下从端点发出的连接上设置的CSS类。"
+					},{
+						name : "connectionsDetachable=true",
+						type : "Boolean",
+						value : "设置此端点的连接是否应该可分离。"
+					},{
+						name : "isTarget=false",
+						type : "Boolean",
+						value : "指示端点可以作为新连接的目标。可选；默认为false。"
+					},{
+						name : "dropOptions",
+						type : "Object",
+						value : "如果isTarget被设置为true，你可以用这个参数的底层库的下降方法提供参数。可选；默认为null。"
+					},{
+						name : "reattach=false",
+						type : "Boolean",
+						value : "决定是否连接重新连接后他们一直拖一个端点和左浮动。默认为false：以这种方式删除的连接将被删除。"
+					},{
+						name : "parameters",
+						type : "Object  ",
+						value : "包含在端点上设置参数的js对象。然后这些参数可以通过getParameter方法。当连接涉及此端点时，此端点的参数将复制到该连接中。源端点参数覆盖目标端点参数，如果它们都具有同名参数。"
+					},{
+						name : "connector-pointer-events",
+						type : "String",
+						value : "对所创建的渲染连接这endoint任何SVG元素的指针事件属性的值。"
+					},{
+						name : "connectionType",
+						type : "String",
+						value : "连接类型的可选描述符，这个端点是。拖动新'connections'时使用。"
+					},{
+						name : "dragProxy",
+						type : "String | Array",
+						value : "当拖动新连接时用作端点的端点的可选端点定义。如果您提供了它，它将覆盖任何其他方法来确定拖动端点应该是什么样子。"
+					}
+				]
+			},
+			"Endpoints.Blank":{
+				title : "Endpoints.Blank Class",
+				original : 'Does not draw anything visible to the user. This Endpoint is probably not what you want if you need your users to be able to drag existing Connections - for that, use a Rectangle or Dot Endpoint and assign to it a CSS class that causes it to be transparent.',
+				translation : '不向用户绘制任何可见的图形。这个端点可能不是您想要的，如果您需要您的用户能够拖动现有的连接，为此，使用矩形或点端点并分配给它一个使其透明的CSS类。',
+				parameters : null
+			},
+			"Endpoints.Dot":{
+				title : "Endpoints.Dot Class",
+				original : 'A circular Endpoint with configurable radius.',
+				translation : '具有可配置半径的圆形端点。',
+				parameters : [
+					{
+						name : "radius=10",
+						type : "Integer",
+						value : "端点半径"
+					},{
+						name : "cssClass",
+						type : "String",
+						value : "可选空格分隔的CSS类列表附加到端点"
+					},{
+						name : "hoverClass",
+						type : "String",
+						value : "可选空格分隔的CSS类列表，当鼠标悬停在端点时附加到端点。"
+					}
+				]
+			},
+			"Endpoints.Image":{
+				title : "Endpoints.Image Class",
+				original : 'An Endpoint that uses an Image.',
+				translation : '使用图像的端点。',
+				parameters : [
+					{
+						name : "src",
+						type : "Integer",
+						value : "要显示的图像的url。"
+					},{
+						name : "cssClass",
+						type : "String",
+						value : "可选空格分隔的CSS类列表附加到端点。"
+					},{
+						name : "hoverClass",
+						type : "String",
+						value : "可选的空间分隔的CSS类列表附加到终点当鼠标悬停在这。"
+					}
+				]
+			},
+			"Endpoints.Rectangle":{
+				title : "Endpoints.Rectangle Class",
+				original : 'A rectangular Endpoint with configurable width/height.',
+				translation : '具有可配置宽度/高度的矩形端点。',
+				parameters :  [
+					{
+						name : "width=20",
+						type : "Integer",
+						value : "端点宽"
+					},{
+						name : "height=20",
+						type : "Integer",
+						value : "端点高"
+					},{
+						name : "cssClass",
+						type : "String",
+						value : "可选空格分隔的CSS类列表附加到端点"
+					},{
+						name : "hoverClass",
+						type : "String",
+						value : "可选空格分隔的CSS类列表，当鼠标悬停在端点时附加到端点。"
+					}
+				]
+			},
+			"jsPlumb":{
+				title : "jsPlumb Class",
+				original : 'This is a static jsPlumbInstance that is created and registered on the window, really just for the sake of convenience: you do not have to use this; you can create your own instances using the jsPlumbInstance.getInstance method. For a list of the available methods and properties on this object, see the jsPlumbInstance API docs.',
+				translation : '这是一个静态的jsplumbinstance，创建并在窗口挂号，真的只是为了方便：你不必使用；可以使用jsplumbinstance.getinstance方法创建你自己的实例。一列在这个对象的方法和属性，看jsplumbinstance API文档。',
+				parameters : null
+			},
+			"jsPlumbInstance":{
+				title : "jsPlumbInstance Class",
+				original : 'This class models an instance of jsPlumb. The global object JsPlumb is both a static module and an instance of this class, and it is an instance of this class that is returned from JsPlumb. A jsPlumbInstance manages a set of Endpoints and Connections.',
+				translation : '这类模型的一个实例jsPlumb。全局对象的JsPlumb是一个静态模块和这个类的一个实例，它是这个类的实例，是返回jsPlumb。一个jsplumbinstance管理一组端点和连接。',
+				parameters : null
+			},
+			"jsPlumbUIComponent":{
+				title : "jsPlumbUIComponent Class",
+				original : "Abstract superclass for Endpoint, Connection, Connector and Overlay. This class provides support for a few basic capabilities that are common to many objects in jsPlumb:Events、Types、CSS Classes、Parameters、Paint Styles.You don't interact directly with an instance of this class; it is abstract.',translation : '抽象类的端点，连接，连接器和覆盖。这个类提供了一些基本的功能，在多个对象共同支持jsPlumb：事件 类型 CSS类 参数 绘画风格 您不直接与这个类的实例交互；它是抽象的。",
+				parameters : null
+			},
+			"jsPlumbUtil":{
+				title : "jsPlumbUtil Class",
+				original : 'A set of helper methods for use by jsPlumb.',
+				translation : '一套用于jsPlumb辅助方法。',
+				parameters : null
+			},
+			"jsPlumbUtil.EventGenerator":{
+				title : "jsPlumbUtil.EventGenerator Class",
+				original : 'Provides event bind/fire functionality.',
+				translation : '提供事件绑定/消防功能。',
+				parameters : null
+			},
+			"Overlay":{
+				title : "Overlay Class",
+				original : "Parent for all Overlay types. The core concept with an Overlay is that of its location, which is specified as follows:Connectors - a value between 0 and 1 inclusive is a proportional value, relative to the length of the Connector's path.- a value greater than 1 or less than 0 is an absolute value (travel along the path inscribed by the Connector) For Connectors, the default value is 0.5.Endpoints- An array of two values which are proportional to the width and height of the Endpoint. For Endpoints, the default value is [0.5, 0.5].",
+				translation : '用于所有覆盖类型的父级。带覆盖的核心概念是它的位置，它被指定如下：连接器- 0和1之间的值是一个比例值，相对于连接器路径的长度。-大于1或小于0的值是绝对值（沿着连接器所写的路径行进）。对于连接器，默认值是0.5。端点-两个值的数组，它们与端点的宽度和高度成比例。对于端点，默认值是[ 0.5，0.5 ]。',
+				parameters : null
+			},
+			"OverlayCapableJsPlumbUIComponent":{
+				title : "OverlayCapableJsPlumbUIComponent Class",
+				original : 'Base class for components that support Overlays. This class should never be directly instantiated.',
+				translation : '支持覆盖的组件的基类。这个类不应该直接实例化。',
+				parameters : null
+			},
+			"Overlays.Arrow":{
+				title : "Overlays.Arrow Class",
+				original : 'Draws an arrow, using four points: the head and two tail points, and a foldback point, which permits the tail of the arrow to be indented.',
+				translation : '画一个箭头，用四点：头和尾点和折返点，使箭头的尾巴是缩进。',
+				parameters : [
+					{
+						name : "width=20",
+						type : "Integer",
+						value : "箭尾宽度"
+					},{
+						name : "length=20",
+						type : "Integer",
+						value : "从箭头到头部的距离"
+					},{
+						name : "location=0.5",
+						type : "Float",
+						value : "在那里，无论是从0到1的包容性的比例值，或一个绝对值（负值意味着距离目标；积极的值大于1的平均距离源）箭头应该出现在连接器"
+					},{
+						name : "direction=1",
+						type : "Integer",
+						value : "指向哪一条路。允许的值是1（默认值，表示转发）和- 1，意思是向后。"
+					},{
+						name : "foldback=0.623",
+						type : "Float",
+						value : "多远沿箭头的尾巴点折返到轴。"
+					},{
+						name : "paintStyle",
+						type : "Object",
+						value : "在用于终端和连接器paintstyle值形成风格的对象。"
+					}
+				]
+			},
+			"Overlays.Diamond":{
+				title : "Overlays.Diamond Class",
+				original : 'This is a specialized instance of Arrow in which jsPlumb hardcodes foldback to 2, meaning the Arrow turns into a Diamond',
+				translation : '这是一个专门的实例中硬编码折返jsPlumb箭头2、箭头变成钻石的意义',
+				parameters : null
+			},
+			"Overlays.Label":{
+				title : "Overlays.Label Class",
+				original : 'Provides a text label with which to decorate Connectors or Endpoints. jsPlumb draws a Label overlay as a styled DIV. You can style a Label using the cssClass parameter, or - if you need to programmatically generate the appearance - the labelStyle parameter.',
+				translation : '提供用于装饰连接器或端点的文本标签。jsPlumb得出标签覆盖一个设计部可以风格标签使用CssClass参数，或者如果您需要以编程方式生成外观LabelStyle参数。',
+				parameters : [
+					{
+						name : "cssClass",
+						type : "String",
+						value : "为标签的CSS类（你也可以使用CssClass参数标签上；它存在的历史原因）"
+					},{
+						name : "font",
+						type : "String",
+						value : "从箭头到头部的距离"
+					},{
+						name : "color",
+						type : "String",
+						value : "一个指定要使用的字体的字符串，用有效的CSS格式。"
+					},{
+						name : "fill",
+						type : "String",
+						value : "指向哪一条路。允许的值是1（默认值，表示转发）和- 1，意思是向后。"
+					},{
+						name : "borderStyle",
+						type : "String",
+						value : "用有效的CSS格式指定标签的边框颜色的字符串。"
+					},{
+						name : "borderWidth",
+						type : "String",
+						value : "边框标签的宽度"
+					},{
+						name : "padding",
+						type : "Integer",
+						value : "标签的填充。"
+					}
+				]
+			},
+			"Overlays.PlainArrow":{
+				title : "Overlays.PlainArrow Class",
+				deprecated : null,
+				original : 'This is just a specialized instance of Arrow in which jsPlumb hardcodes foldback to 1, meaning the tail of the Arrow is a flat edge',
+				translation : '这就是一个专门的实例在jsPlumb箭硬编码折返至1，意义的箭头的尾巴是平的边缘',
+				parameters : [
+					{
+						name : "width=20",
+						type : "Integer",
+						value : "箭尾宽度"
+					},{
+						name : "length=20",
+						type : "Integer",
+						value : "从箭头到头部的距离"
+					},{
+						name : "location=0.5",
+						type : "Float",
+						value : "在那里，无论是从0到1的包容性的比例值，或一个绝对值（负值意味着距离目标；积极的值大于1的平均距离源）箭头应该出现在连接器"
+					},{
+						name : "direction=1",
+						type : "Integer",
+						value : "指向哪一条路。允许的值是1（默认值，表示转发）和- 1，意思是向后。"
+					},{
+						name : "paintStyle",
+						type : "Object",
+						value : "在用于终端和连接器paintstyle值形成风格的对象。"
+					}
+				]
+			}
+		}
+		renderList()
+		renderPage("Anchors.Assign")
+		$("#list").on("click","li",function(){
+			var text = $(this).text();
+			renderPage(text);
+		})
+		function renderPage(text){
+			$(".title").text(json[text].title);
+			$(".original").text(json[text].original);
+			$(".translation").text(json[text].translation);
+			if(json[text].parameters != null){
+				var str = `<h6>参数: </h6><ul>`;
+				for (var i = 0; i < json[text].parameters.length; i++) {
+					str += `<li>
+								<div class="name">[${json[text].parameters[i].name}]</div>
+								<div class="parameterCont">
+									<p>type : ${json[text].parameters[i].type}</p>
+									<p>explain : ${json[text].parameters[i].value}</p>
+								</div>
+							</li>`					
+				}
+				str = str + `</ul>`;
+				$(".parameters").html(str);
+			}else{
+				$(".parameters").html("");
+			}
+		}
+		function renderList(){
+			var str = "";
+			for (var i = 0; i < list.length; i++) {
+				str += "<li>"+list[i]+"</li>";
+			}
+			$("#list ul").html(str)
+		}
+	</script>
+</html>
