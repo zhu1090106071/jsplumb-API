@@ -89,6 +89,53 @@
 			width: 83%;
 			margin-top: 20px;
 		}
+		.methodNav{
+			width: 100%;
+			height: 32px;
+			line-height: 32px;
+			border-bottom: 3px solid #3c565d;
+			margin-top: 30px;
+		}
+		.methodNav li{
+			float: left;
+			padding: 0 10px;
+		}
+		.heightLight{
+			color: #fff;
+			background: #3c565d;
+		}
+		.index{
+			margin-top: 20px;
+		}
+		.methodCont h4{
+			font-size: 18px;
+			font-weight: normal;
+			margin-bottom: 10px;
+		}
+		.index p{
+			font-size: 14px;
+			margin-bottom: 10px;
+			color: #434343;
+		}
+		.methodCont ul{
+			padding-left: 4%;
+		}
+		.methodCont ul li{
+			float: left;
+			width: 32%;
+		}
+		.methodCont ul li a{
+			color: #428bca;
+    		text-decoration: none;
+		}
+		.methodCont ul li a:hover,.methodCont ul li a:focus {
+		    color: #2a6496;
+		    text-decoration: underline;
+		}
+		.methods{
+			margin-bottom: 10px;
+			overflow: hidden;
+		}
 	</style>
 </head>
 <body>
@@ -109,11 +156,11 @@
 					<div class="translation"></div>
 					<div class="parameters"></div>
 				</div>
+				<div class="method">
+					<ul class="methodNav"></ul>
+					<div class="methodCont"></div>
+				</div>
 			</div>
-			<!-- <div id="method">
-				<h2>Methods</h2>
-				<div class="Methods"></div>
-			</div> -->
 		</div>
 	</div>
 </body>
@@ -126,7 +173,6 @@
 			"Anchors.Assign",
 			"Anchors.AutoDefault",
 			"Anchors.Bottom",
-			"Anchors.BottomCenter",
 			"Anchors.BottomLeft",
 			"Anchors.BottomRight",
 			"Anchors.Center",
@@ -136,12 +182,9 @@
 			"Anchors.ContinuousRight",
 			"Anchors.ContinuousTop",
 			"Anchors.Left",
-			"Anchors.LeftMiddle",
 			"Anchors.Perimeter",
 			"Anchors.Right",
-			"Anchors.RightMiddle",
 			"Anchors.Top",
-			"Anchors.TopCenter",
 			"Anchors.TopLeft",
 			"Anchors.TopRight",
 			"Connection",
@@ -172,37 +215,73 @@
 				title : "Anchors.Assign Class",
 				original : "An Anchor whose location is assigned at connection time, through an AnchorPositionFinder. Used in conjunction with the makeTarget function. jsPlumb has two of these - Fixed and Grid, and you can also write your own.",
 				translation : "锚的位置是通过anchorpositionfinder，在连接时分配。与创建目标函数结合使用。jsPlumb有这两个函数 Fixed 和 Grid ，你也可以自己写。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.AutoDefault":{
 				title : "Anchors.AutoDefault Class",
 				original : "Default DynamicAnchors - chooses from Top, Right, Bottom, Left.",
 				translation : "默认DynamicAnchors(动态锚)-选择从顶部，底部，左，右。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Bottom":{
 				title : "Anchors.Bottom Class",
 				original : "An Anchor that is located at the bottom center of the element.",
 				translation : "位于元素底部的锚。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.BottomLeft":{
 				title : "Anchors.BottomLeft Class",
 				original : "An Anchor that is located at the bottom left corner of the element.",
 				translation : "位于元素左下角的锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.BottomRight":{
 				title : "Anchors.BottomRight Class",
 				original : "An Anchor that is located at the bottom right corner of the element.",
 				translation : "位于元素右下角的锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Center":{
 				title : "Anchors.Center Class",
 				original : "An Anchor that is located at the center of the element.",
 				translation : "位于元素中心的一个锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Continuous":{
 				title : "Anchors.Continuous Class",
@@ -214,37 +293,73 @@
 						type : "String",
 						value :"可选的锚点数组。有效值是'top'、'left'、'bottom'、'right'。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.ContinuousBottom":{
 				title : "Anchors.ContinuousBottom Class",
 				original : "A continuous anchor that uses only the bottom edge of the element.",
 				translation : "仅使用元素的下边缘的连续锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.ContinuousLeft":{
 				title : "Anchors.ContinuousLeft Class",
 				original : "A continuous anchor that uses only the left edge of the element.",
 				translation : "仅使用元素的左边缘的连续锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.ContinuousRight":{
 				title : "Anchors.ContinuousRight  Class",
 				original : "A continuous anchor that uses only the right edge of the element.",
 				translation : "仅使用元素右边的连续锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.ContinuousTop":{
 				title : "Anchors.ContinuousTop  Class",
 				original : "A continuous anchor that uses only the top edge of the element.",
 				translation : "仅使用元素的上边缘的连续锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Left":{
 				title : "Anchors.Left Class",
 				original : "An Anchor that is located at the left middle of the element.",
 				translation : "位于元素左中间的一个锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Perimeter":{
 				title : "Anchors.Perimeter Class",
@@ -264,37 +379,73 @@
 						type : "Number",
 						value : '旋转度数。'
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Right":{
 				title : "Anchors.Right Class",
 				original : "An Anchor that is located at the right middle of the element.",
 				translation : "位于元素右中间的一个锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.Top":{
 				title : "Anchors.Left Class",
 				original : "An Anchor that is located at the top center of the element.",
 				translation : "位于元素顶端的锚。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.TopLeft":{
 				title : "Anchors.TopLeft  Class",
 				original : "An Anchor that is located at the top left corner of the element.",
 				translation : "位于元素左上角的锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Anchors.TopRight":{
 				title : "Anchors.TopRight Class",
 				original : "An Anchor that is located at the top right corner of the element.",
 				translation : "位于元素右上角的锚点。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Connection":{
 				title : "Connection Class",
 				original : "Models a Connection. A Connection consists of two Endpoints (each of which belongs to some DOM element), a Connector (the actual path inscribed by the Connection), and zero or more Overlays.",
 				translation : "建立连接模型。连接由两个端点（每一个端点都属于某个DOM元素）、一个连接器（连接的实际路径）和零个或多个覆盖组成。",
-				parameters : null
+				parameters : null,
+				nav : ["Index"],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","fire","getConnector","getData","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","getUuids","hasType","hideOverlay","hideOverlays","isDetachable","isEditable","isHover","isReattach","isSuspendEvents","isVisible","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setConnector","setDetachable","setEditable","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setReattach","setSuspendEvents","setType","setVisible","showOverlay","showOverlay","toggleType","unbind","updateClasses"],
+					properties: ["endpoints","overlays","scope","source","sourceId","target","targetId"]
+				}
 			},
 			"Connector":{
 				title : "Connector Class",
@@ -316,73 +467,95 @@
 						type : "Integer",
 						value : "可选值,在开始贝塞尔曲线之前从连接器端点移动的距离。"
 					}
-				]
+				],
+				nav : ["Index"],
+				index : {
+					itemIndex : "",
+					methods: ["getLength"],
+					properties: ["canvas"]
+				}
 			},
 			"Connectors.Flowchart":{
 				title : "Connectors.Flowchart Class",
 				original : 'Provides Flowchart connectors.',
 				translation : '提供流程图连接器。',
-				parameters : [{
-					name : "stub=30",
-					type : "Integer",
-					value : "连接器两端各短截线的最小长度。这可以是一个整数，给出连接两端的值，或两个整数的数组，为每个结束提供单独的值。"
-				},
-				{
-					name : "gap=0",
-					type : "Integer",
-					value : "在连接器末端和端点驻留元素之间留出的间隙。如果你把这个做得比存根还大，你会看到一些奇怪的行为。像存根一样，可以是数组或单个值。"
-				},
-				{
-					name : "cornerRadius=0",
-					type : "Float",
-					value : "可选的，定义分段之间的角半径。默认为0（硬边角）"
-				},
-				{
-					name : "alwaysRespectStubs=false",
-					type : "Boolean",
-					value : "连接器两端各短截线的最小长度。这可以是一个整数，给出连接两端的值，或两个整数的数组，为每个结束提供单独的值。"
-				},
-				{
-					name : "midpoint=0.5",
-					type : "Number",
-					value : "如果提供，将使用此位置jsPlumb作为连接器的中点。"
-				}]
+				parameters : [
+					{
+						name : "stub=30",
+						type : "Integer",
+						value : "连接器两端各短截线的最小长度。这可以是一个整数，给出连接两端的值，或两个整数的数组，为每个结束提供单独的值。"
+					},
+					{
+						name : "gap=0",
+						type : "Integer",
+						value : "在连接器末端和端点驻留元素之间留出的间隙。如果你把这个做得比存根还大，你会看到一些奇怪的行为。像存根一样，可以是数组或单个值。"
+					},
+					{
+						name : "cornerRadius=0",
+						type : "Float",
+						value : "可选的，定义分段之间的角半径。默认为0（硬边角）"
+					},
+					{
+						name : "alwaysRespectStubs=false",
+						type : "Boolean",
+						value : "连接器两端各短截线的最小长度。这可以是一个整数，给出连接两端的值，或两个整数的数组，为每个结束提供单独的值。"
+					},
+					{
+						name : "midpoint=0.5",
+						type : "Number",
+						value : "如果提供，将使用此位置jsPlumb作为连接器的中点。"
+					}
+				],
+				nav : ["Index"],
+				index : {
+					itemIndex : "",
+					methods: ["getPath"],
+					properties: null
+				}
 			},
 			"Connectors.StateMachine":{
 				title : "Connectors.StateMachine Class",
 				original : 'Provides "state machine" connectors. These are a quadratic bezier curve.',
 				translation : '提供“状态机”连接器。这是一个二次贝塞尔曲线。',
-				parameters : [{
-					name : "curviness=10",
-					type : "Number",
-					value : '衡量“曲线”将连接。这是贝塞尔曲线的控制点从连接两个端点的直线中点的距离，并不意味着连接器是这个宽的。贝塞尔曲线永远不会到达它的控制点，它们充当引力质量。'
+				parameters : [
+					{
+						name : "curviness=10",
+						type : "Number",
+						value : '衡量“曲线”将连接。这是贝塞尔曲线的控制点从连接两个端点的直线中点的距离，并不意味着连接器是这个宽的。贝塞尔曲线永远不会到达它的控制点，它们充当引力质量。'
 
-				},{
-					name : "margin=5",
-					type : "Integer",
-					value : '从元素到开始和结束连接器的距离（以像素为单位）。'
+					},{
+						name : "margin=5",
+						type : "Integer",
+						value : '从元素到开始和结束连接器的距离（以像素为单位）。'
 
-				},{
-					name : "proximityLimit=80",
-					type : "Integer",
-					value : '设置元素被认为过于紧密的距离，以避免花哨曲线的困扰。'
+					},{
+						name : "proximityLimit=80",
+						type : "Integer",
+						value : '设置元素被认为过于紧密的距离，以避免花哨曲线的困扰。'
 
-				},{
-					name : "loopbackRadius=25",
-					type : "Integer",
-					value : '环回连接器的半径。'
+					},{
+						name : "loopbackRadius=25",
+						type : "Integer",
+						value : '环回连接器的半径。'
 
-				},{
-					name : "showLoopback=true",
-					type : "Boolean ",
-					value : '如果设置为false，这就告诉连接器，它可以通过连接元素的连接器来绘制源和目标是相同元素的连接。默认值为true；连接器总是在元素周围进行环回连接循环，而不是通过它。'
+					},{
+						name : "showLoopback=true",
+						type : "Boolean ",
+						value : '如果设置为false，这就告诉连接器，它可以通过连接元素的连接器来绘制源和目标是相同元素的连接。默认值为true；连接器总是在元素周围进行环回连接循环，而不是通过它。'
 
-				},{
-					name : 'orientation="clockwise"',
-					type : "Number",
-					value : '有效值是“clockwise(顺时针)”和“anticlockwise(逆时针)”。表示环形连接应以什么方向环绕。'
+					},{
+						name : 'orientation="clockwise"',
+						type : "Number",
+						value : '有效值是“clockwise(顺时针)”和“anticlockwise(逆时针)”。表示环形连接应以什么方向环绕。'
 
-				}]
+					}
+				],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Connectors.Straight":{
 				title : "Connectors.Straight Class",
@@ -412,7 +585,13 @@
 					name : "targetGap",
 					type : "Integer",
 					value : "仅针对目标端点的可选间隔。"
-				}]
+				}],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Endpoint":{
 				title : "Endpoint Class",
@@ -528,13 +707,25 @@
 						type : "String | Array",
 						value : "当拖动新连接时用作端点的端点的可选端点定义。如果您提供了它，它将覆盖任何其他方法来确定拖动端点应该是什么样子。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","detach","detachAll","detachFrom","detachFromConnection","fire","getElement","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","getUuid","hasType","hideOverlay","hideOverlays","isConnectedTo","isEnabled","isFull","isHover","isSuspendEvents","isVisible","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setAnchor","setDragAllowedWhenFull","setElement","setEnabled","setEndpoint","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","setVisible","showOverlay","showOverlays","toggleType","unbind","updateClasses"],
+					properties: ["canvas","connections","dragProxy","overlays","scope"]
+				}
 			},
 			"Endpoints.Blank":{
 				title : "Endpoints.Blank Class",
 				original : 'Does not draw anything visible to the user. This Endpoint is probably not what you want if you need your users to be able to drag existing Connections - for that, use a Rectangle or Dot Endpoint and assign to it a CSS class that causes it to be transparent.',
 				translation : '不向用户绘制任何可见的图形。这个端点可能不是您想要的，如果您需要您的用户能够拖动现有的连接，为此，使用矩形或点端点并分配给它一个使其透明的CSS类。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","detach","detachAll","detachFrom","detachFromConnection","fire","getElement","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","getUuid","hasType","hideOverlay","hideOverlays","isConnectedTo","isEnabled","isFull","isHover","isSuspendEvents","isVisible","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setAnchor","setDragAllowedWhenFull","setElement","setEnabled","setEndpoint","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","setVisible","showOverlay","showOverlays","toggleType","unbind","updateClasses"],
+					properties: ["canvas","connections","dragProxy","overlays","scope"]
+				}
 			},
 			"Endpoints.Dot":{
 				title : "Endpoints.Dot Class",
@@ -554,7 +745,13 @@
 						type : "String",
 						value : "可选空格分隔的CSS类列表，当鼠标悬停在端点时附加到端点。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","detach","detachAll","detachFrom","detachFromConnection","fire","getElement","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","getUuid","hasType","hideOverlay","hideOverlays","isConnectedTo","isEnabled","isFull","isHover","isSuspendEvents","isVisible","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setAnchor","setDragAllowedWhenFull","setElement","setEnabled","setEndpoint","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","setVisible","showOverlay","showOverlays","toggleType","unbind","updateClasses"],
+					properties: ["canvas","connections","dragProxy","overlays","scope"]
+				}
 			},
 			"Endpoints.Image":{
 				title : "Endpoints.Image Class",
@@ -574,7 +771,13 @@
 						type : "String",
 						value : "可选的空间分隔的CSS类列表附加到终点当鼠标悬停在这。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","detach","detachAll","detachFrom","detachFromConnection","fire","getElement","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","getUuid","hasType","hideOverlay","hideOverlays","isConnectedTo","isEnabled","isFull","isHover","isSuspendEvents","isVisible","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setAnchor","setDragAllowedWhenFull","setElement","setEnabled","setEndpoint","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","setVisible","showOverlay","showOverlays","toggleType","unbind","updateClasses"],
+					properties: ["canvas","connections","dragProxy","overlays","scope"]
+				}
 			},
 			"Endpoints.Rectangle":{
 				title : "Endpoints.Rectangle Class",
@@ -598,48 +801,96 @@
 						type : "String",
 						value : "可选空格分隔的CSS类列表，当鼠标悬停在端点时附加到端点。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","detach","detachAll","detachFrom","detachFromConnection","fire","getElement","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","getUuid","hasType","hideOverlay","hideOverlays","isConnectedTo","isEnabled","isFull","isHover","isSuspendEvents","isVisible","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setAnchor","setDragAllowedWhenFull","setElement","setEnabled","setEndpoint","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","setVisible","showOverlay","showOverlays","toggleType","unbind","updateClasses"],
+					properties: ["canvas","connections","dragProxy","overlays","scope"]
+				}
 			},
 			"jsPlumb":{
 				title : "jsPlumb Class",
 				original : 'This is a static jsPlumbInstance that is created and registered on the window, really just for the sake of convenience: you do not have to use this; you can create your own instances using the jsPlumbInstance.getInstance method. For a list of the available methods and properties on this object, see the jsPlumbInstance API docs.',
 				translation : '这是一个静态的jsplumbinstance，创建并在窗口挂号，真的只是为了方便：你不必使用；可以使用jsplumbinstance.getinstance方法创建你自己的实例。一列在这个对象的方法和属性，看jsplumbinstance API文档。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addEndpoint","addEndpoints","animate","batch","bind","cleanupListeners","connect","deleteConnection","deleteEndpoint","deleteEveryEndpoint","doWhileSuspended","deprecated","draggable","empty","fire","getAllConnections","getConnections","getContainer","getDefaultScope","getEndpoint","getInstance","getScope","getSelector","getSourceScope","getTargetScope","getType","hide","importDefaults","isHoverSuspended","isSource","isSourceEnabled","isSuspendDrawing","isSuspendEvents","isTarget","isTargetEnabled","jsPlumbUtil.replace","makeSource","makeTarget","off","on","ready","recalculateOffsets","registerConnectionType","registerConnectionTypes","registerEndpointType","registerEndpointTypes","remove","removeAllEndpoints","repaint","repaintEverything","reset","restoreDefaults","revalidate","select","selectEndpoints","setContainer","setDefaultScope","setDraggable","setHoverSuspended","setIdChanged","setParent","setScope","setSource","setSourceEnabled","setSourceScope","setSuspendDrawing","setSuspendEvents","setTarget","setTargetEnabled","setTargetScope","show","toggleDraggable","toggleSourceEnabled","toggleTargetEnabled","toggleVisible","unbind","unmakeEverySource","unmakeEveryTarget","unmakeSource","unmakeTarget"],
+					properties: ["connectorClass","Defaults","Defaults.Anchor","Defaults.Anchors","Defaults.ConnectionOverlays","Defaults.ConnectionsDetachable","Defaults.Connector","Defaults.Container","Defaults.DoNotThrowErrors","Defaults.DragOptions","Defaults.DropOptions","Defaults.Endpoint","Defaults.EndpointHoverStyle","Defaults.EndpointHoverStyles","Defaults.Endpoints","Defaults.EndpointStyle","Defaults.EndpointStyles","Defaults.HoverPaintStyle","Defaults.LabelStyle","deprecated","Defaults.LogEnabled","Defaults.MaxConnections","Defaults.Overlays","Defaults.PaintStyle","Defaults.ReattachConnections","Defaults.RenderMode","Defaults.Scope","draggingClass","elementDraggingClass","endpointAnchorClassPrefix","endpointClass","endpointConnectedClass","endpointDropAllowedClass","endpointDropForbiddenClass","endpointFullClass","hoverClass","overlayClass"]
+				}
 			},
 			"jsPlumbInstance":{
 				title : "jsPlumbInstance Class",
 				original : 'This class models an instance of jsPlumb. The global object JsPlumb is both a static module and an instance of this class, and it is an instance of this class that is returned from JsPlumb. A jsPlumbInstance manages a set of Endpoints and Connections.',
 				translation : '这类模型的一个实例jsPlumb。全局对象的JsPlumb是一个静态模块和这个类的一个实例，它是这个类的实例，是返回jsPlumb。一个jsplumbinstance管理一组端点和连接。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addEndpoint","addEndpoints","animate","batch","bind","cleanupListeners","connect","deleteConnection","deleteEndpoint","deleteEveryEndpoint","doWhileSuspended","deprecated","draggable","empty","extend","static","fire","getAllConnections","getConnections","getContainer","getDefaultConnectionType","static","getDefaultEndpointType","static","getDefaultScope","getEndpoint","getInstance","getScope","getSelector","getSourceScope","getTargetScope","getType","hide","importDefaults","isHoverSuspended","isSource","isSourceEnabled","isSuspendDrawing","isSuspendEvents","isTarget","isTargetEnabled","jsPlumbUtil.replace","makeSource","makeTarget","off","on","ready","recalculateOffsets","registerConnectionType","registerConnectionTypes","registerEndpointType","registerEndpointTypes","remove","removeAllEndpoints","repaint","repaintEverything","reset","restoreDefaults","revalidate","select","selectEndpoints","setContainer","setDefaultScope","setDraggable","setHoverSuspended","setIdChanged","setParent","setScope","setSource","setSourceEnabled","setSourceScope","setSuspendDrawing","setSuspendDrawing","setSuspendEvents","setTarget","setTargetEnabled","setTargetScope","show","toggleDraggable","toggleSourceEnabled","toggleTargetEnabled","toggleVisible","unbind","unmakeEverySource","unmakeEveryTarget","unmakeSource","unmakeTarget"],
+					properties: ["connectorClass","Defaults","Defaults.Anchor","Defaults.Anchors","Defaults.ConnectionOverlays","Defaults.ConnectionsDetachable","Defaults.Connector","Defaults.Container","Defaults.DoNotThrowErrors","Defaults.DragOptions","Defaults.DropOptions","Defaults.Endpoint","Defaults.EndpointHoverStyle","Defaults.EndpointHoverStyles","Defaults.Endpoints","Defaults.EndpointStyle","Defaults.EndpointStyles","Defaults.HoverPaintStyle","Defaults.LabelStyle","deprecated","Defaults.LogEnabled","Defaults.MaxConnections","Defaults.Overlays","Defaults.PaintStyle","Defaults.ReattachConnections","Defaults.RenderMode","Defaults.Scope","draggingClass","elementDraggingClass","endpointAnchorClassPrefix","endpointClass","endpointConnectedClass","endpointDropAllowedClass","endpointDropForbiddenClass","endpointFullClass","hoverClass","overlayClass","SVG"]
+				}
 			},
 			"jsPlumbUIComponent":{
-				title : "jsPlumbUIComponent Class",
+				title: "jsPlumbUIComponent Class",
 				original : "Abstract superclass for Endpoint, Connection, Connector and Overlay. This class provides support for a few basic capabilities that are common to many objects in jsPlumb:Events、Types、CSS Classes、Parameters、Paint Styles.You don't interact directly with an instance of this class; it is abstract.',translation : '抽象类的端点，连接，连接器和覆盖。这个类提供了一些基本的功能，在多个对象共同支持jsPlumb：事件 类型 CSS类 参数 绘画风格 您不直接与这个类的实例交互；它是抽象的。",
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addType","bind","cleanupListeners","clearTypes","fire","getParameter","getParameters","getType","hasType","isHover","isSuspendEvents","jsPlumbUtil.replace","reapplyTypes","removeClass","removeType","setHover","setHoverPaintStyle","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","toggleType","unbind","updateClasses"],
+					properties: null
+				}
 			},
 			"jsPlumbUtil":{
 				title : "jsPlumbUtil Class",
 				original : 'A set of helper methods for use by jsPlumb.',
 				translation : '一套用于jsPlumb辅助方法。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["isArray","isBoolean","isDate","isEmpty","isFunction","isNull","isNumber","isObject","isString","merge"],
+					properties: null
+				}
 			},
 			"jsPlumbUtil.EventGenerator":{
 				title : "jsPlumbUtil.EventGenerator Class",
 				original : 'Provides event bind/fire functionality.',
 				translation : '提供事件绑定/消防功能。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["bind","cleanupListeners","fire","isSuspendEvents","jsPlumbUtil.replace","setSuspendEvents","unbind"],
+					properties: null
+				}
 			},
 			"Overlay":{
 				title : "Overlay Class",
 				original : "Parent for all Overlay types. The core concept with an Overlay is that of its location, which is specified as follows:Connectors - a value between 0 and 1 inclusive is a proportional value, relative to the length of the Connector's path.- a value greater than 1 or less than 0 is an absolute value (travel along the path inscribed by the Connector) For Connectors, the default value is 0.5.Endpoints- An array of two values which are proportional to the width and height of the Endpoint. For Endpoints, the default value is [0.5, 0.5].",
 				translation : '用于所有覆盖类型的父级。带覆盖的核心概念是它的位置，它被指定如下：连接器- 0和1之间的值是一个比例值，相对于连接器路径的长度。-大于1或小于0的值是绝对值（沿着连接器所写的路径行进）。对于连接器，默认值是0.5。端点-两个值的数组，它们与端点的宽度和高度成比例。对于端点，默认值是[ 0.5，0.5 ]。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"OverlayCapableJsPlumbUIComponent":{
 				title : "OverlayCapableJsPlumbUIComponent Class",
 				original : 'Base class for components that support Overlays. This class should never be directly instantiated.',
 				translation : '支持覆盖的组件的基类。这个类不应该直接实例化。',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "",
+					methods: ["addClass","addOverlay","addType","bind","cleanupListeners","clearTypes","fire","getLabel","getLabelOverlay","getOverlay","getOverlays","getParameter","getParameters","getType","hasType","hideOverlay","hideOverlays","isHover","isSuspendEvents","jsPlumbUtil.replace","reapplyTypes","removeAllOverlays","removeClass","removeOverlay","removeOverlays","removeType","setHover","setHoverPaintStyle","setLabel","setPaintStyle","setParameter","setParameters","setSuspendEvents","setType","showOverlay","showOverlays","toggleType","unbind","updateClasses"],
+					properties: ["overlays"]
+				}
 			},
 			"Overlays.Arrow":{
 				title : "Overlays.Arrow Class",
@@ -671,13 +922,25 @@
 						type : "Object",
 						value : "在用于终端和连接器paintstyle值形成风格的对象。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Overlays.Diamond":{
 				title : "Overlays.Diamond Class",
 				original : 'This is a specialized instance of Arrow in which jsPlumb hardcodes foldback to 2, meaning the Arrow turns into a Diamond',
 				translation : '这是一个专门的实例中硬编码折返jsPlumb箭头2、箭头变成钻石的意义',
-				parameters : null
+				parameters : null,
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Overlays.Label":{
 				title : "Overlays.Label Class",
@@ -713,7 +976,13 @@
 						type : "Integer",
 						value : "标签的填充。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			},
 			"Overlays.PlainArrow":{
 				title : "Overlays.PlainArrow Class",
@@ -742,7 +1011,13 @@
 						type : "Object",
 						value : "在用于终端和连接器paintstyle值形成风格的对象。"
 					}
-				]
+				],
+				nav : [],
+				index : {
+					itemIndex : "该类不提供任何方法、属性、属性或事件。",
+					methods: null,
+					properties: null
+				}
 			}
 		}
 		renderList()
@@ -755,9 +1030,10 @@
 			$(".title").text(json[text].title);
 			$(".original").text(json[text].original);
 			$(".translation").text(json[text].translation);
+			//渲染参数
 			if(json[text].parameters != null){
 				var str = `<h6>参数: </h6><ul>`;
-				for (var i = 0; i < json[text].parameters.length; i++) {
+				for (let i = 0; i < json[text].parameters.length; i++) {
 					str += `<li>
 								<div class="name">[${json[text].parameters[i].name}]</div>
 								<div class="parameterCont">
@@ -771,9 +1047,41 @@
 			}else{
 				$(".parameters").html("");
 			}
+			//渲染导航
+			var methodNavStr = '<li class="heightLight">Index</li>';
+			if(json[text].nav.length>0){
+				for (let i = 0; i < json[text].nav.length; i++) {
+					methodNavStr += "<li>"+ json[text].nav[i] +"</li>"
+				}
+			}
+			$(".methodNav").html(methodNavStr);	
+			renderNavCont(0,json[text])
+		}
+		function renderNavCont(ind,obj){
+			if(ind == 0){
+				var str = '<div class="index">'+
+						'<h4>Item Index</h4>'+
+						'<p>'+obj.index.itemIndex+'</p>'+
+					'</div>';
+				if(obj.index.methods != null){
+					str +='<div class="methods"><h4>Methods</h4><ul>';
+					for (let i = 0; i < obj.index.methods.length; i++) {
+						str += '<li><a href="#method_'+obj.index.methods[i]+'">'+obj.index.methods[i]+'</a></li>';
+					}					
+					str +='</ul></div>';
+				}
+				if(obj.index.properties != null){
+					str +='<div class="properties"><h4>properties</h4><ul>';
+					for (let i = 0; i < obj.index.properties.length; i++) {
+						str += '<li><a href="#method_'+obj.index.properties[i]+'">'+obj.index.properties[i]+'</a></li>'
+					}					
+					str +='</ul></div>'
+				}
+				$(".methodCont").html(str);
+			}
 		}
 		function renderList(){
-			var str = "";
+			var str = '';
 			for (var i = 0; i < list.length; i++) {
 				str += "<li>"+list[i]+"</li>";
 			}
